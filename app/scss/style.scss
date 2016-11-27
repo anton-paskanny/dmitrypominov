@@ -1,0 +1,101 @@
+@import "common/mixins";
+@import "common/variables";
+
+html {
+	font-size: 100%;
+}
+
+body, html {
+	height: 100%;
+}
+
+body {
+	font-family: $helveticaRoman;
+	font-size: $base-fs;
+	line-height: $base-lh;
+	color: $base-color-wh;
+	font-weight: normal;
+}
+
+.studio-page {
+	background: #080808 url('../img/bg-studio.jpg') no-repeat center top fixed;
+	background-size: cover;
+}
+
+.wedding-page {
+	background: #efefef url('../img/bg-wedding.jpg') no-repeat center top fixed;
+	background-size: cover;
+	color: $base-color-dr;
+}
+
+.travelling-page {
+	background: #efefef url('../img/bg-travelling.jpg') no-repeat center 25% fixed;
+	background-size: cover;
+}
+
+.interview-page {
+	background: #efefef url('../img/bg-interview.jpg') no-repeat center center fixed;
+}
+
+.food-page {
+	background: #efefef url('../img/bg-food.jpg') no-repeat center bottom fixed;
+	background-size: cover;
+}
+
+h1, h2, h3, p, ul {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 960px;
+	min-width: 320px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+// import components
+@import "components/header";
+@import "components/logo";
+@import "components/footer";
+@import "components/category";
+@import "components/modal";
+@import "components/slider";
+@import "components/hamburger";
+@import "components/mobile-menu";
+@import "components/loader";
+
+@media all and (max-width: $small-point) {
+	.food-page {
+		background: #efefef url('../img/bg-food.jpg') no-repeat center 20%;
+		background-size: auto;
+	}
+
+	.studio-page {
+		background: #080808 url('../img/bg-studio.jpg') no-repeat center top;
+		background-size: auto;
+	}
+
+	.wedding-page {
+		background: #efefef url('../img/bg-wedding.jpg') no-repeat center top;
+		background-size: auto;
+	}
+
+	.travelling-page {
+		background: #efefef url('../img/bg-travelling.jpg') no-repeat center 25%;
+		background-size: auto;
+	}
+
+	.interview-page {
+		background: #efefef url('../img/bg-interview.jpg') no-repeat 50% 27%;
+	}
+
+}

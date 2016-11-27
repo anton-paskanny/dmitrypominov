@@ -1,0 +1,109 @@
+.category {
+	margin-bottom: 180px;
+
+	&__title {
+		padding-left: 140px;
+		font-family: $drugsThin;
+		@include convertToRem(24, 30);
+
+		h2 {
+			position: relative;
+			font-weight: 100;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: -2px;
+				left: -26px;
+				display: block;
+				width: 44px;
+				height: 1px;
+				background-color: $bg-color-wh;
+				transform: rotate(133deg);
+			}
+		}
+	}
+
+	&__quote {
+		position: relative;
+		width: 51.04166666666667%;
+		margin-top: 60px;
+		margin-left: auto;
+		border-left: 1px solid rgba(255, 255, 255, 0.4);;
+		font-family: $helveticaThin;
+		@include convertToRem(18, 24);
+
+		&:after, &:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			display: block;
+			width: 23px;
+			height: 1px;
+			background-color: rgba(255, 255, 255, 0.4);
+		}
+
+		&:after {
+			bottom: 1px;
+		}
+
+		&:before {
+			top: 0;
+		}
+
+		blockquote {
+			margin: 0;
+			padding: 12px 7%;
+		}
+
+		.author {
+			margin-top: 8px;
+			@include convertToRem(14, 24);
+			color: $green-color;
+		}
+	}
+}
+
+@media all and (max-width: $medium-point) {
+	.category {
+
+		&__title {
+			padding-left: 20px;
+		}
+
+		&__quote {
+			width: 100%;
+		}
+
+		&__quote blockquote {
+			padding: 3% 0;
+			padding-left: 5%;
+			text-align: left;
+		}
+	}
+}
+
+/* wedding page */
+.wedding-page .category__title h2:before {
+	background-color: $bg-color-dr;
+}
+
+.wedding-page .category__quote {
+	border-left-color: rgba(0, 0, 0, 0.4);
+
+	&:after,
+	&:before {
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+}
+
+/* food page */
+.food-page .category__quote {
+	color: $base-color-dr;
+	border-left-color: rgba(0, 0, 0, 0.4);
+
+	&:after,
+	&:before {
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+}

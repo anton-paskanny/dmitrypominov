@@ -1,0 +1,132 @@
+.main-footer {
+  width: 100%;
+  position: relative;
+  background-color: #000;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    display: block;
+    width: 50%;
+    height: 48px;
+    background: linear-gradient(135deg , transparent 34px, rgba(0, 0, 0, 1) 0%) left no-repeat;
+  }
+
+  .container {
+    @include flexible();
+    background-color: #000;
+  }
+
+  &__item:first-of-type {
+    width: 50%; /*450 : 960*/
+    padding: 35px 0;
+    font-family: $helveticaLight;
+    @include convertToRem(12, 30);
+    color: #999;
+
+    p {
+      display: inline;
+    }
+  }
+
+  &__item:last-of-type {
+    width: 50%;
+    align-self: flex-start;
+  }
+
+  &__social-links {
+    width: 160px;
+    @include flexible();
+    margin: 0 auto;
+    list-style-type: none;
+
+    li:not(:last-child) {
+      margin-right: 25px;
+    }
+
+    circle {
+      transition: fill 0.3s linear;
+    }
+
+    li:hover .instagram-svg-circle {
+      fill: $inst-fill;
+    }
+
+    li:hover .facebook-svg-circle {
+      fill: $fcb-fill;
+    }
+
+    li:hover .vkontakte-svg-circle {
+      fill: $vk-fill;
+    }
+
+    a {
+      display: block;
+    }
+
+  }
+
+  &__license {
+    margin-left: 8%;
+    text-decoration: underline;
+    color: #999;
+    transition: color 0.2s linear;
+
+    &:hover {
+      color: $green-color;
+    }
+  }
+
+}
+
+@media all and (max-width: $tablet-large-point) {
+  .main-footer {
+    &__item:first-of-type {
+      p {
+        display: block;
+      }
+    }
+    &__license {
+      margin-left: 0;
+    }
+  }
+}
+
+@media all and (max-width: $small-point) {
+  .main-footer .container {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .main-footer__item:first-of-type {
+    width: 100%;
+    margin-bottom: 35px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .main-footer__item:last-of-type {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .main-footer__social-links {
+    width: 60%;
+    justify-content: space-around;
+    margin-top: 35px;
+    margin-bottom: 15px;
+  }
+
+  .main-footer__social-links li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .main-footer:before {
+    height: 30px;
+    left: 30%;
+    width: 70%;
+  }
+}

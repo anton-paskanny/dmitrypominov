@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'HelveticaNeueCyrThin';
+  src:
+    url('../fonts/helvetica-thin/HelveticaNeueCyrThin_gdi.eot') format('embedded-opentype'),
+    url('../fonts/helvetica-thin/HelveticaNeueCyrThin_gdi.woff') format('woff'),
+    url('../fonts/helvetica-thin/HelveticaNeueCyrThin_gdi.woff2') format('woff2'),
+    url('../fonts/helvetica-thin/HelveticaNeueCyrThin_gdi.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyrLight';
+  src:
+    url('../fonts/helvetica-light/HelveticaNeueCyrLight_gdi.eot') format('embedded-opentype'),
+    url('../fonts/helvetica-light/HelveticaNeueCyrLight_gdi.woff') format('woff'),
+    url('../fonts/helvetica-light/HelveticaNeueCyrLight_gdi.woff2') format('woff2'),
+    url('../fonts/helvetica-light/HelveticaNeueCyrLight_gdi.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyrRoman';
+  src:
+    url('../fonts/helvetica-roman/HelveticaNeueCyr-Roman.eot') format('embedded-opentype'),
+    url('../fonts/helvetica-roman/HelveticaNeueCyr-Roman.woff') format('woff'),
+    url('../fonts/helvetica-roman/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+    url('../fonts/helvetica-roman/HelveticaNeueCyr-Roman.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Drugs';
+  src:
+    url('../fonts/drugs/Drugs_gdi.eot') format('embedded-opentype'),
+    url('../fonts/drugs/Drugs_gdi.woff') format('woff'),
+    url('../fonts/drugs/Drugs_gdi.woff2') format('woff2'),
+    url('../fonts/drugs/Drugs_gdi.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

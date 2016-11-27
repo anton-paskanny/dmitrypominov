@@ -1,0 +1,143 @@
+.main-header {
+	width: 100%;
+	@include flexible($ai: stretch, $jc: space-between);
+	padding-top: 80px;
+	font-family: $helveticaThin;
+
+	a {
+		display: block;
+		color: $base-color-wh;
+	}
+
+	&__navigation {
+		@include flexible($ai: flex-start);
+		@include convertToRem(18, 30);
+		list-style-type: none;
+
+		li:not(:last-child) {
+			margin-right: 32px;
+		}
+
+		a {
+			transition: color 0.3s linear;
+		}
+
+		li:hover > a {
+			color: $green-color;
+		}
+
+		li.active {
+			position: relative;
+			color: $green-color;
+		}
+
+		li.active:before {
+			content: '';
+			position: absolute;
+			bottom: -8px;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 6px;
+			background-color: $green-color;
+		}
+	}
+
+	.additional-links {
+		position: relative;
+		@include flexible($ai: center);
+
+		&__about span {
+			top: 50%;
+    	margin-top: -1%;
+		}
+
+		&__about span,
+		&__about span:after,
+		&__about span:before {
+			width: 30px;
+			height: 2px;
+			background-color: $green-color;
+			border-radius: 4px;
+			position: absolute;
+			-webkit-transition-property: -webkit-transform;
+			transition-property: transform;
+			transition-property: transform,-webkit-transform;
+			-webkit-transition-duration: .15s;
+			transition-duration: .15s;
+			-webkit-transition-timing-function: ease;
+			transition-timing-function: ease;
+			display: block;
+		}
+
+		&__about span:before,
+	  &__about span:after {
+	    content: " ";
+	    display: block;
+	  }
+
+	  &__about span:before {
+			width: 40px;
+	    top: -9px;
+	  }
+
+	  &__about span:after {
+			width: 16px;
+	    bottom: -9px;
+	  }
+
+		a:first-child {
+			width: 40px;
+			height: 20px;
+			margin-right: 20px;
+		}
+
+		a {
+			height: 20px;
+		}
+
+	}
+
+	&__mobile-menu {
+		display: none;
+		background-color: transparent;
+		border: none;
+		outline: none;
+	}
+}
+
+@media all and (max-width: $tablet-point) and (orientation: landscape) {
+	.main-header {
+		padding-top: 30px;
+	}
+}
+
+@media all and (max-width: $medium-point) {
+	.main-header {
+		padding-top: 30px;
+	}
+
+	.main-header__navigation {
+		display: none;
+	}
+
+	.main-header__mobile-menu {
+		display: block;
+	}
+}
+
+@media all and(max-width: $small-point) {
+	.main-header {
+		padding-top: 30px;
+	}
+}
+
+/* wedding-page */
+.wedding-page .main-header a {
+	color: $base-color-dr;
+}
+
+/* food-page */
+.food-page .main-header a {
+	color: $base-color-dr;
+}
