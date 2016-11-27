@@ -1,3 +1,3 @@
 # dmitrypominov
 
-http://anton-paskannyi.github.io/dmitrypominov/dist/
+https://anton-paskannyi.github.io/dmitrypominov/dist/
